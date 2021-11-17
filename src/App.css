@@ -42,3 +42,14 @@
  input{
    outline: none;
  }
+
+ .WeatherForecast{
+   text-align: center;
+ }
+ .WeatherForecast-temps{
+   font-weight: 600;
+ }
+ 
+ .WeatherForecast-temps .text-muted{
+   margin-left: 5px;
+ }

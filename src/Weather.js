@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, {useState} from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 
 export default function Weather(props){
@@ -49,11 +50,16 @@ export default function Weather(props){
                   />
                 </div>
                 <div className="col-3">
-                  <input type="button" value="search" className="btn btn-primary"/>
+                  <input
+                    type="button"
+                    value="search"
+                    className="btn btn-primary"
+                  />
                 </div>
               </div>
             </form>
             <WeatherInfo data={weatherData} />
+            <WeatherForecast />
           </div>
         );
     }

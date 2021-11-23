@@ -40,7 +40,7 @@
    border-style: inset;
  }
 
- input[type=button]{
+ input[type=submit]{
    float: right;
  }
 

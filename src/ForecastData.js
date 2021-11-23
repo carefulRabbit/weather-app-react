@@ -19,14 +19,14 @@ export default function ForecastData(props){
         return(`${minTemp}`);
     }
     
-    return(
-        <div>
-            <div className="WeatherForecast-da text-muted">{Day()}</div>
-            <WeatherIcon code={props.data.weather[0].icon} size={52} />
-            <div className="WeatherForecast-temps">
-                <span>{maxtTemp()}</span>
-                <span className="text-muted">{minTemp()}</span>
-            </div>
+    return (
+      <div>
+        <div className="WeatherForecast-da text-muted">{Day()}</div>
+        <WeatherIcon code={props.data.weather[0].icon} size={52} />
+        <div className="WeatherForecast-temps">
+          <span>{maxtTemp()}°</span>
+          <span className="text-muted">{minTemp()}°</span>
         </div>
+      </div>
     );
 }

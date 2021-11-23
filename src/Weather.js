@@ -2,6 +2,7 @@ import axios from "axios";
 import React, {useState} from "react";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+import Footer from "./Footer";
 
 
 export default function Weather(props){
@@ -39,28 +40,31 @@ export default function Weather(props){
 
     if(weatherData.ready){
         return (
-          <div className=" container Weather">
-            <form onSubmit={handleSubmit}>
-              <div className="row">
-                <div className="col-9">
-                  <input
-                    type="search"
-                    placeholder="Search a City"
-                    autoFocus="on"
-                    onChange={handleCityChange}
-                  />
+          <div>
+            <div className=" container Weather">
+              <form onSubmit={handleSubmit}>
+                <div className="row">
+                  <div className="col-9">
+                    <input
+                      type="search"
+                      placeholder="Search a City"
+                      autoFocus="on"
+                      onChange={handleCityChange}
+                    />
+                  </div>
+                  <div className="col-3">
+                    <input
+                      type="button"
+                      value="search"
+                      className="btn btn-primary"
+                    />
+                  </div>
                 </div>
-                <div className="col-3">
-                  <input
-                    type="button"
-                    value="search"
-                    className="btn btn-primary"
-                  />
-                </div>
-              </div>
-            </form>
-            <WeatherInfo data={weatherData} />
-            <WeatherForecast coord ={weatherData.coords}/>
+              </form>
+              <WeatherInfo data={weatherData} />
+              <WeatherForecast coord={weatherData.coords} />
+            </div>
+            <Footer />
           </div>
         );
     }
